@@ -1,0 +1,28 @@
+Consider a country in which cities are connected by roads.But there is problem with this country that if one starts from any city he cannot go to all cities in 
+the country i.e there are bunch of cities of which are not connected to the other bunch of cities.So engineers of this country are trying to construct roads between cities 
+such that all of them get connected i.e one can traverse all cities starting from any city.You need to find the minimum no of such roads that should be formed such 
+that all cities are connected.
+
+INPUT FORMAT:
+The first line will contain two integers n and m ,the number of cities and no of roads that are present between two cities.
+Each of the next m lines contains  space-separated integers denoting the two city which are connected initally.
+
+CONSTRAINTS:
+1<=n<=10^5
+1<=m<=10^3
+Cities are numbered starting from 1.
+
+OUTPUT FORMAT:
+A single integer no of minimum roads to be made.
+
+Sample Input :
+6 3
+1 2
+2 3 
+4 5
+
+Sample Output:
+2
+
+Explanation:
+1,2,3 are connected, 4,5 are connected and 6 is left. No of roads will be 2 as if we connect 3 to 4 and 5 to 6 then all cities are connected.
