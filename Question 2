@@ -1,0 +1,26 @@
+A array is given of n positive elements where each element can be represented in 64 bits.There will be two type of queries (q) ,one type of query will be represented by 1 k and the other type of query will be represented by 2 m.
+In first query k is position at which one need to flip the bit(0 to 1 or 1 to 0) in all the elements in the array.
+In second query the m is the number which is present in array .One need to ouput the bit length of m after all the operation of query 1 (before this query of type 2) is performed.
+
+Constraint: 1<=n<=10^5
+1<=k<=64
+m is the element present in the array and can be represented in 64 bits.
+2<=q<=10^5
+Queries of type 1 will be atmost 10^4
+Queries of type 2 will be atmost 9*10^4
+It is sure that first query will be of type 1.
+
+Solution :
+We will initially take two variable ( temp and temp1) and initialize them to 0.
+For each query of type 1 :
+We will take out (k-1)th power of 2 using fast exponentiation and store it in temp1,and then xor it with temp and store back the xor answer in temp .
+Code Snippet:
+temp1=power(2,(k-1))
+(temp=temp^temp1);
+
+For each query of type 2:
+In this it is very simple we need to do xor between temp and m and store in variable (say ans) and finally print bit length of the value in variable ans.
+The length can be efficiently taken out by using :-(int)log2(ans)+1.
+Code Snippet :-
+ans=temp^m;
+cout << (int)log2(ans)+1<<"\n";
